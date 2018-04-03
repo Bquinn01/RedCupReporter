@@ -1,3 +1,4 @@
+const int tiltPin = 5;
 const int buttonPin = 2;     // the number of the pushbutton pin
 const int ledPin =  6;      // the number of the LED pin
 int buttonPushCounter = 0;   // counter for the number of button presses
@@ -51,6 +52,7 @@ if (buttonState != lastButtonState) {
 
       Serial.print("number of button pushes: ");
       Serial.println(buttonPushCounter);
+        counter->save(buttonPushCounter);
    }
    }
     lastButtonState = buttonState;
